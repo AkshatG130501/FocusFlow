@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 const UploadVideoModal = ({ onClose }) => {
   const [video, setVideo] = useState(null);
@@ -117,6 +118,10 @@ const UploadVideoModal = ({ onClose }) => {
       </div>
     </div>
   );
+};
+
+UploadVideoModal.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default UploadVideoModal;

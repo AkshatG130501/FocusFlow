@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import Timer from "./Timer";
 
 const TimerNavbar = ({ currentTask }) => {
@@ -67,6 +68,10 @@ const TimerNavbar = ({ currentTask }) => {
       </div>
     </div>
   );
+};
+
+TimerNavbar.propTypes = {
+  currentTask: PropTypes.string.isRequired,
 };
 
 export default TimerNavbar;
