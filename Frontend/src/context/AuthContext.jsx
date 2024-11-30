@@ -1,5 +1,6 @@
 import axios from "axios"; // Import axios for making HTTP requests
 import React, { useState, useEffect, useContext, createContext } from "react";
+import PropTypes from "prop-types";
 
 // Create a context for authentication
 const AuthContext = createContext();
@@ -36,6 +37,10 @@ export function AuthProvider({ children }) {
     setAuthUser,
     isLoggedIn,
     setIsLoggedIn,
+  };
+
+  AuthProvider.propTypes = {
+    children: PropTypes.node.isRequired,
   };
 
   // Return the provider component with the value prop

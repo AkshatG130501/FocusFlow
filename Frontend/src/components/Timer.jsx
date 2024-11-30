@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const Timer = ({ currentTask, isActive, isDone }) => {
   const [seconds, setSeconds] = useState(() => {
@@ -52,6 +53,12 @@ const Timer = ({ currentTask, isActive, isDone }) => {
   }
 
   return <div className="text-4xl font-semibold">{formatTime(seconds)}</div>;
+};
+
+Timer.propTypes = {
+  currentTask: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  isDone: PropTypes.bool.isRequired,
 };
 
 export default Timer;
