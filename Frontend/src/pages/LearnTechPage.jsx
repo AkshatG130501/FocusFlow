@@ -11,6 +11,7 @@ const LearnTechPage = () => {
   const [timer, setTimer] = useState(0);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [videoIds, setVideoIds] = useState([]);
+  const YoutubeAPIKey = import.meta.env.VITE_YOUTUBE_API_KEY;
 
   const content = {
     Articles: `Articles related to ${activeTech}`,
@@ -39,7 +40,7 @@ const LearnTechPage = () => {
         method: "get",
         url: `https://www.googleapis.com/youtube/v3/search`,
         params: {
-          key: API_KEY,
+          key: YoutubeAPIKey,
           q: activeTech,
           type: "video",
           part: "snippet",
