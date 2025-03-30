@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://focus-flow-git-main-akshats-projects-9b15f955.vercel.app/",
+    origin: "https://focus-flow-lilac.vercel.app",
     credentials: true,
   })
 );
